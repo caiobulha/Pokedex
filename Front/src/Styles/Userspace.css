@@ -1,0 +1,124 @@
+.globalUserArea {
+    background-color: rgba(0, 0, 0, 0.917);
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.globalUserArea header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.pictureWrap {
+    width: 80px;
+    margin-top: 15px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; align-items: center;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.pictureWrap > img {
+    width: 90%;
+    border-radius: 50%;
+}
+
+.pictureWrap:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 40px rgb(212, 0, 255);
+}
+
+header h1 {
+    color: white;
+}
+
+
+.friends {
+    background-color: white;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.friends:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 40px rgb(212, 0, 255);
+}
+
+.friendsArrow {
+    width: 20px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+.friendsList {
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    color: white;
+}
+
+.nameSpace {
+    padding: 5px 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .pictureWrap {
+        width: 50px;
+        height: 50px;
+    }
+
+    .userspace {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        background-color: #112;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .globalUserArea {
+        flex-flow: row nowrap;
+        width: 100%;
+        border-radius: 0;
+        height: 100%;
+    }
+
+    .friends {
+        margin-right: 20px;
+    }
+
+    .globalUserArea header {
+        flex-flow: row nowrap;
+        gap: 0px 30px;
+    }
+
+    .friendsList {
+        position: absolute;
+        background-color: rgb(100, 100, 100);
+        width: 100%;
+        height: 150px;
+        z-index: 1;
+        transition: .4s ease-in-out;
+    }
+}
+
